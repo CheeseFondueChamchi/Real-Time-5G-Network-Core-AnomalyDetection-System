@@ -34,6 +34,7 @@
 2. Key Modules
    
   2.1 Train Module
+  
     The training modules uses AnomalyTransformer as the primary model for anomaly detection. it is periodically fine-tuned to adapt to random changes in time-series patterns caused by:
       - Netwrok function package updates.
       - Port flow connection changes between netwrok function objects.
@@ -42,6 +43,7 @@
       - Model Quantization: To optimize resource use, the 64bit model is quatized to an 8bit model, reducing hardware requirements. Although this increase variance in anomaly scores by ~3%, it is deemed acceptable for production environments. 
       
   2.2 Inference Module
+  
     Statistical values from differenct network functions are generated asynchronously, causing potential delays in anomaly detection. To minimize latency, the inference module leverages FastAPI with uvicorn library for asynchronous processing, ensuring real-time detection.
     Inference Model Options
       - AnomalyTransformer
