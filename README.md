@@ -32,12 +32,13 @@
 
 <img width="408" alt="image" src="https://github.com/user-attachments/assets/c8653eae-3f3e-4930-8bca-a6b531625549">
 
+-------------------------------------------------------------------------------------------------------------------------
+   
 2. Key Modules
    
   2.1 Train Module
   
     The training modules uses AnomalyTransformer as the primary model for anomaly detection. it is periodically fine-tuned to adapt to random changes in time-series patterns caused by:
-      - Netwrok function package updates.
       - Port flow connection changes between netwrok function objects.
     Highilghts
       - Performance : The AnomalyTransformer outperforms traditional models(e.g., LSTM-AE) in handling diverse time-series patterns without extensive hyperparameter tuning.
@@ -54,6 +55,7 @@
       - LSTM-AE (Bi-directional)
         Capture sequential dependencies in data by leveraging bidirectional LSTM architecture. 
         Effective for learing complex temporal patterns but requires more training time.
+      - Netwrok function package updates.
         Suitable for detecting anomalies with long-range dependecies.
       - TSNET
         A lightweight time-series model designed for fast inference and lower computational overhead.
@@ -63,19 +65,19 @@
         Utilizes deep convolutional networks to extract features from time-series data.
         Performs weel in scenarios where anomalies manifest as sharp changes or spikes.
         Optimized for high-demensianl input data.
-
-
-
-
+-------------------------------------------------------------------------------------------------------------------------
 
 3. Threeshold for Detection
+   
   A self-thresholding function is designed for each statistcal feature to enhance anomaly detection accuracy.
   The threshold values are determined during the final training steps based on probability density function.
   This approach adapt:
     -Feature-specific anomaly probabilities are accurately reflected.
     -Operator feedback is incorporated into the threshold definitions for tailored detection.
-   
+-------------------------------------------------------------------------------------------------------------------------
+
 4. Results
+   
   The anomaly detection system demonstrates:
     - Improved Resource Efficiency: Quantized models reduce hardware resource usage significantly.
     - Accurate Anomaly Detection: Self-thresholding and fine-tuned models enhance detection performance.
