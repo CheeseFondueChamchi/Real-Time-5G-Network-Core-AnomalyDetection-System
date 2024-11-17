@@ -74,6 +74,7 @@
   This approach adapt:
     -Feature-specific anomaly probabilities are accurately reflected.
     -Operator feedback is incorporated into the threshold definitions for tailored detection.
+    
 -------------------------------------------------------------------------------------------------------------------------
 
 4. Results
